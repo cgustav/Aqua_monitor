@@ -65,7 +65,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
       // color: Color(0xFFFF7643),
       // color: AppColors.contentColorBlue,
       // color: Colors.orangeAccent,
-      color: const Color(0xFFFF7643),
+      color: Color(0xFFFF7643),
     );
     Widget text;
     switch (value.toInt()) {
