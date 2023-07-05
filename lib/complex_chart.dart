@@ -12,7 +12,8 @@ class LineChartSample2 extends StatefulWidget {
 class _LineChartSample2State extends State<LineChartSample2> {
   List<Color> gradientColors = [
     AppColors.contentColorCyan,
-    AppColors.contentColorBlue,
+    // AppColors.contentColorBlue,
+    const Color(0xFFFF7643)
   ];
 
   bool showAvg = false;
@@ -60,7 +61,11 @@ class _LineChartSample2State extends State<LineChartSample2> {
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: 16,
+      fontSize: 12,
+      // color: Color(0xFFFF7643),
+      // color: AppColors.contentColorBlue,
+      // color: Colors.orangeAccent,
+      color: const Color(0xFFFF7643),
     );
     Widget text;
     switch (value.toInt()) {
@@ -87,7 +92,9 @@ class _LineChartSample2State extends State<LineChartSample2> {
   Widget leftTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: 15,
+      fontSize: 12,
+      // color: AppColors.contentColorPurple,
+      color: AppColors.contentColorBlue,
     );
     String text;
     switch (value.toInt()) {
@@ -104,7 +111,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
         return Container();
     }
 
-    return Text(text, style: style, textAlign: TextAlign.left);
+    return Text(text, style: style, textAlign: TextAlign.center);
   }
 
   LineChartData mainData() {
@@ -116,13 +123,15 @@ class _LineChartSample2State extends State<LineChartSample2> {
         verticalInterval: 1,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: AppColors.mainGridLineColor,
+            // color: AppColors.mainGridLineColor,
+            color: Colors.transparent,
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: AppColors.mainGridLineColor,
+            // color: AppColors.mainGridLineColor,
+            color: Colors.transparent,
             strokeWidth: 1,
           );
         },
@@ -154,7 +163,8 @@ class _LineChartSample2State extends State<LineChartSample2> {
       ),
       borderData: FlBorderData(
         show: true,
-        border: Border.all(color: const Color(0xff37434d)),
+        // border: Border.all(color: const Color(0xff37434d)),
+        border: Border.all(color: Colors.transparent),
       ),
       minX: 0,
       maxX: 11,
